@@ -5,4 +5,14 @@ DisneyPlus SPA Plan
 3. 검색을 통한 영화 검색 / 상세페이지
 4. 인증 및 서버 / firebase를 통한 데이터베이스
 
-API KEY:
+React / TheMovieDB / Styled-Components
+
+전체구조 생성하기
+
+1. Main Page
+   GNB
+   Banner
+   Category
+   MovieList
+   MovieList
+   Footer
