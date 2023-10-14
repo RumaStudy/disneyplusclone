@@ -1,6 +1,7 @@
 DisneyPlus SPA Plan
 
 Github Address: https://github.com/RumaStudy/disneyplusclone
+
 Publishing Address: https://rumastudy.github.io/disneyplusclone
 
 1. 로그인 페이지 - Google OATH 를 통해 구글 ID 로그인 기능 구현 예정
