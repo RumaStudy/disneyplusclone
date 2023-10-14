@@ -1,5 +1,8 @@
 DisneyPlus SPA Plan
 
+Github Address: https://github.com/RumaStudy/disneyplusclone
+Publishing Address: https://rumastudy.github.io/disneyplusclone
+
 1. 로그인 페이지 - Google OATH 를 통해 구글 ID 로그인 기능 구현 예정
 2. 로그인 후 메인페이지를 통해 영화 등을 클릭 시 모달을 통해 정보 확인
 3. 검색을 통한 영화 검색 / 상세페이지
@@ -30,3 +33,5 @@ Node.js가 자동으로 해당 패키지를 다운로드하도록 명령하는 �
 다만 npm5 부터는 --no-save를 입력하지 않는 한 자동으로 --save를 입력한 것으로 간주함.
 
 즉, npm i axios === npm i axios --save
+
+"homepage": "https://rumastudy.github.io/disneyplusclone/",
