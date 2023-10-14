@@ -1,6 +1,7 @@
 import "./styles/App.css";
 import GNB from "./components/GNB";
 import Banner from "./components/Banner";
+import Category from "./components/Category";
 
 import bgImg from "./assets/img/home-background.png";
 
@@ -35,6 +36,7 @@ function App() {
       <Container>
         <GNB />
         <Banner />
+        <Category />
       </Container>
     </>
   );

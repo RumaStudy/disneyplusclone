@@ -1,6 +1,6 @@
 /* BaseURL 을 제외한 나머지 상세주소의 재사용을 위한 파일 */
 
-const request = {
+const requests = {
   fetchNowPlaying: "movie/now_playing",
   fetchTrending: "/trending/all/week",
   fetchTopRated: "/movie/top_rated",
@@ -11,4 +11,4 @@ const request = {
   fetchDocumentaryMovies: "/discover/movie?with_genres=99",
 };
 
-export default request;
+export default requests;
