@@ -1,26 +1,26 @@
 .banner {
+  position: relative;
   color: white;
   object-fit: contain;
-  height: 448px;
+  height: calc(100vh - 250px);
+}
+.banner_fadeBottom {
+  width: 100%;
+  height: 40rem;
+  position: absolute;
+  bottom: 0;
 }
 @media (min-width: 1500px) {
   .banner {
-    position: relative;
-    height: 600px;
-  }
-  .banner_fadeBottom {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 40rem;
+    height: calc(100vh - 250px);
   }
 }
 
 @media (max-width: 768px) {
   .banner_content {
-    width: min-content !important;
+    width: fit-content !important;
     padding-left: 2.3rem;
-    margin-left: 0 !important;
+    margin: auto !important;
   }
   .banner_desc {
     font-size: 0.8rem !important;
@@ -40,9 +40,15 @@
 }
 
 .banner_content {
-  height: 190px;
-  padding-top: 140px;
+  position: relative;
+  top: 140px;
+  box-sizing: content-box;
+  width: fit-content;
+  height: fit-content;
+  padding: 1.5rem;
+  border-radius: 30px;
   margin-left: 40px;
+  background-color: rgba(2, 7, 21, 0.45);
 }
 .banner_title {
   font-size: 3rem;
@@ -56,7 +62,6 @@
   font-weight: 500;
   font-size: 1rem;
   max-width: 400px;
-  height: 80px;
 }
 .banner_fadeBottom {
   height: 7.4rem;

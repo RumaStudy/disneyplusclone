@@ -12,8 +12,6 @@ const Container = styled.main`
   position: relative;
   top: 70px;
   left: 0;
-  display: flex;
-  justify-content: space-between;
   min-height: calc(100vh - 250px);
   padding: 0 calc(3.5vw + 5px);
   overflow-x: hidden;
