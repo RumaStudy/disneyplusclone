@@ -62,7 +62,7 @@ const Container = styled.div`
   gap: 25px;
   grid-template-columns: repeat(5, 1fr);
 
-  @media (max-wdith: 768px) {
+  @media (max-width: 768px) {
     grid-template-columns: repeat(1, 1fr);
   }
 `;

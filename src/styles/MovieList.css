@@ -1,0 +1,42 @@
+img {
+  width: 400px;
+  object-fit: contain;
+  background-clip: "";
+}
+.list_posters {
+  display: flex;
+  width: fit-content;
+}
+.slider {
+  position: relative;
+}
+.slider_arrow-left,
+.slider_arrow-right {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-clip: content-box;
+  height: 100%;
+  padding: 20px 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  transition: 400ms ease-in-out;
+}
+.slider_arrow-right {
+  right: 0;
+}
+.arrow {
+  transition: 400ms ease-in-out;
+}
+.arrow:hover {
+  transform: scale(1.5);
+}
+.slider:hover .slider_arrow-left,
+.slider:hover .slider_arrow-right {
+  visibility: visible;
+}
