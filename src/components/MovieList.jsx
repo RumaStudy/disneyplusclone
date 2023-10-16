@@ -23,6 +23,7 @@ const MovieList = ({ title, id, fetchURL }) => {
   // Modal Opener
   const handleClick = (item) => {
     setModal(true);
+    setSelMovie(item);
   };
 
   // Main Content
