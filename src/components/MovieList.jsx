@@ -1,14 +1,17 @@
 import React, { useCallback, useState, useEffect } from "react";
 import axios from "../api/axios";
+import MovieModal from "./MovieModal";
 
 /* CSS */
 import "../styles/MovieList.css";
 
 const MovieList = ({ title, id, fetchURL }) => {
-  /* useState */
+  // useState
   const [movies, setMovies] = useState([]);
+  const [modal, setModal] = useState(false);
+  const [selMovie, setSelMovie] = useState({});
 
-  /* useEffect & useCallback */
+  // useEffect & useCallback
   const fetchMovieList = useCallback(async () => {
     const response = await axios.get(fetchURL);
     setMovies(response.data.results);
@@ -17,13 +20,26 @@ const MovieList = ({ title, id, fetchURL }) => {
     fetchMovieList();
   }, [fetchURL, fetchMovieList]);
 
-  /* Main Content */
+  // Modal Opener
+  const handleClick = (item) => {
+    setModal(true);
+  };
+
+  // Main Content
   return (
     <section>
       <h2>{title}</h2>
       <div className="slider">
         <div className="slider_arrow-left">
-          <span className="arrow">{"<"}</span>
+          <span
+            className="arrow"
+            onClick={() => {
+              console.log(id);
+              document.getElementById(id).scrollLeft -= window.innerWidth + 80;
+            }}
+          >
+            {"<"}
+          </span>
         </div>
         <div id={id} className="list_posters">
           {movies.map((item) => (
@@ -31,13 +47,25 @@ const MovieList = ({ title, id, fetchURL }) => {
               src={`https://image.tmdb.org/t/p/original${item.backdrop_path}`}
               alt="movie_img"
               key={item.name}
+              onClick={() => {
+                handleClick(item);
+                setSelMovie(item);
+              }}
             />
           ))}
         </div>
         <div className="slider_arrow-right">
-          <span className="arrow">{">"}</span>
+          <span
+            className="arrow"
+            onClick={() => {
+              document.getElementById(id).scrollLeft += window.innerWidth - 80;
+            }}
+          >
+            {">"}
+          </span>
         </div>
       </div>
+      {modal && <MovieModal {...selMovie} setModal={setModal} />}
     </section>
   );
 };
