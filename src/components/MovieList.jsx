@@ -11,13 +11,11 @@ const MovieList = ({ title, id, fetchURL }) => {
   /* useEffect & useCallback */
   const fetchMovieList = useCallback(async () => {
     const response = await axios.get(fetchURL);
-    console.log(response.data.results);
     setMovies(response.data.results);
-    console.log(movies);
-  });
+  }, [fetchURL]);
   useEffect(() => {
     fetchMovieList();
-  }, [fetchURL]);
+  }, [fetchURL, fetchMovieList]);
 
   /* Main Content */
   return (

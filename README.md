@@ -28,11 +28,4 @@ Styled-Components의 장점
    MovieList
    Footer
 
-npm {Module-Name} --save
-node_modules를 전부 옮기지 않아도 dependencies에 해당 모듈을 추가함으로써
-Node.js가 자동으로 해당 패키지를 다운로드하도록 명령하는 어구
-다만 npm5 부터는 --no-save를 입력하지 않는 한 자동으로 --save를 입력한 것으로 간주함.
-
-즉, npm i axios === npm i axios --save
-
 "homepage": "https://rumastudy.github.io/disneyplusclone/",
