@@ -35,33 +35,27 @@ const Container = styled.main`
 
 function App() {
   return (
-    <>
-      <Container>
-        <GNB />
-        <Banner />
-        <Category />
-        <MovieList
-          title="Trending Now"
-          id="TR"
-          fetchURL={request.fetchTrending}
-        />
-        <MovieList
-          title="Top Rated"
-          id="TOP"
-          fetchURL={request.fetchTopRated}
-        />
-        <MovieList
-          title="Action Movies"
-          id="ACT"
-          fetchURL={request.fetchActionMovies}
-        />
-        <MovieList
-          title="Comedy Movies"
-          id="COM"
-          fetchURL={request.fetchComedyMovies}
-        />
-      </Container>
-    </>
+    <Container>
+      <GNB />
+      <Banner />
+      <Category />
+      <MovieList
+        title="Trending Now"
+        id="TR"
+        fetchURL={request.fetchTrending}
+      />
+      <MovieList title="Top Rated" id="TOP" fetchURL={request.fetchTopRated} />
+      <MovieList
+        title="Action Movies"
+        id="ACT"
+        fetchURL={request.fetchActionMovies}
+      />
+      <MovieList
+        title="Comedy Movies"
+        id="COM"
+        fetchURL={request.fetchComedyMovies}
+      />
+    </Container>
   );
 }
 

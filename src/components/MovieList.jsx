@@ -28,7 +28,7 @@ const MovieList = ({ title, id, fetchURL }) => {
 
   // Main Content
   return (
-    <section>
+    <section className="MovieListWrapper">
       <h2>{title}</h2>
       <div className="slider">
         <div className="slider_arrow-left">

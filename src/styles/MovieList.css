@@ -1,3 +1,10 @@
+.MovieListWrapper {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.MovieListWrapper > h2 {
+  font-size: 1.7rem;
+}
 .slider {
   position: relative;
 }
@@ -64,6 +71,7 @@
 .list_posters > img {
   width: 250px;
   object-fit: cover;
+  transition: 400ms ease;
 }
 .list_posters > img:hover {
   transform: scale(1.08);
