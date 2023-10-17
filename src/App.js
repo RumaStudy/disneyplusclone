@@ -1,71 +1,34 @@
 import "./styles/App.css";
+import { Outlet, Routes, Route } from "react-router-dom";
+
+// Components
 import GNB from "./components/GNB";
-import Banner from "./components/Banner";
-import Category from "./components/Category";
-import MovieList from "./components/MovieList";
-import Footer from "./components/Footer";
 
-/* Img */
-import bgImg from "./assets/img/home-background.png";
+// Pages
+import Main from "./pages/Main/index";
+import Login from "./pages/Login/index";
+import Detail from "./pages/Detail/index";
+import Search from "./pages/Search/index";
 
-/* Library */
-import { styled } from "styled-components";
-
-/* Axios */
-import request from "./api/request";
-
-const Container = styled.main`
-  position: relative;
-  top: 70px;
-  left: 0;
-  min-height: calc(100vh - 250px);
-  padding: 0 calc(3.5vw + 5px);
-  overflow-x: hidden;
-  &::before {
-    content: "";
-    position: absolute;
-    background-image: url(${bgImg});
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    inset: 0px;
-    opacity: 1;
-    z-index: -1;
-  }
-`;
+const Layout = () => {
+  return (
+    <div className="WholePageContainer">
+      <GNB />
+      <Outlet /> {/* 서브페이지가 보여질 위치를 지정해주는 컴포넌트 */}
+    </div>
+  );
+};
 
 function App() {
   return (
-    <Container>
-      <GNB />
-      <Banner />
-      <Category />
-      <MovieList
-        title="Trending Now"
-        id="TR"
-        subtitle="As rated by regular MovieDB voters"
-        fetchURL={request.fetchTrending}
-      />
-      <MovieList
-        title="Top Rated"
-        id="TOP"
-        subtitle="As rated by regular MovieDB voters"
-        fetchURL={request.fetchTopRated}
-      />
-      <MovieList
-        title="Action Movies"
-        id="ACT"
-        subtitle="As rated by regular MovieDB Action Favors"
-        fetchURL={request.fetchActionMovies}
-      />
-      <MovieList
-        title="Comedy Movies"
-        id="COM"
-        subtitle="As rated by regular MovieDB Comedy Favors"
-        fetchURL={request.fetchComedyMovies}
-      />
-      <Footer />
-    </Container>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Login />} />
+        <Route path="main" element={<Main />} />
+        <Route path=":movieId" element={<Detail />} /> {/* ← Dynamic Address */}
+        <Route path="search" element={<Search />} />
+      </Route>
+    </Routes>
   );
 }
 
