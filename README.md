@@ -1,8 +1,8 @@
 # DisneyPlus SPA Plan
 
-# Github Address: https://github.com/RumaStudy/disneyplusclone
+### Github Address: https://github.com/RumaStudy/disneyplusclone
 
-# Publishing Address: https://rumastudy.github.io/disneyplusclone
+### Publishing Address: https://rumastudy.github.io/disneyplusclone
 
 1. 로그인 페이지 - Google OATH 를 통해 구글 ID 로그인 기능 구현 예정
 2. 로그인 후 메인페이지를 통해 영화 등을 클릭 시 모달을 통해 정보 확인
