@@ -3,6 +3,7 @@ import GNB from "./components/GNB";
 import Banner from "./components/Banner";
 import Category from "./components/Category";
 import MovieList from "./components/MovieList";
+import Footer from "./components/Footer";
 
 /* Img */
 import bgImg from "./assets/img/home-background.png";
@@ -55,6 +56,7 @@ function App() {
         id="COM"
         fetchURL={request.fetchComedyMovies}
       />
+      <Footer />
     </Container>
   );
 }
