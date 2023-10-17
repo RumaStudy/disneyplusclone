@@ -27,9 +27,9 @@ function App() {
       <Route path="/" element={<Layout />}>
         {/* 중첩라우팅 */}
         <Route index element={<Main />} />
-        <Route path="main" element={<Main />} />
-        <Route path=":movieId" element={<Detail />} />
-        <Route path="search" element={<Search />} />
+        <Route path="/main" element={<Main />} />
+        <Route path="/:movieId" element={<Detail />} />
+        <Route path="/search" element={<Search />} />
       </Route>
     </Routes>
   );
