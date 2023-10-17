@@ -78,6 +78,7 @@
   width: 250px;
   object-fit: cover;
   transition: 400ms ease;
+  cursor: pointer;
 }
 .list_posters > img:hover {
   transform: scale(1.08);

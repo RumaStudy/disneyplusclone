@@ -1,9 +1,7 @@
 import React from "react";
-import GNB from "../../components/GNB";
 import Banner from "../../components/Banner";
 import Category from "../../components/Category";
 import MovieList from "../../components/MovieList";
-import Footer from "../../components/Footer";
 
 // Imgs
 import bgImg from "../../assets/img/home-background.png";
@@ -37,7 +35,6 @@ const Container = styled.main`
 const index = () => {
   return (
     <Container>
-      <GNB />
       <Banner />
       <Category />
       <MovieList
@@ -64,7 +61,6 @@ const index = () => {
         subtitle="As rated by regular MovieDB Comedy Favors"
         fetchURL={request.fetchComedyMovies}
       />
-      <Footer />
     </Container>
   );
 };
