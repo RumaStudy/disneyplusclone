@@ -43,17 +43,25 @@ function App() {
       <MovieList
         title="Trending Now"
         id="TR"
+        subtitle="As rated by regular MovieDB voters"
         fetchURL={request.fetchTrending}
       />
-      <MovieList title="Top Rated" id="TOP" fetchURL={request.fetchTopRated} />
+      <MovieList
+        title="Top Rated"
+        id="TOP"
+        subtitle="As rated by regular MovieDB voters"
+        fetchURL={request.fetchTopRated}
+      />
       <MovieList
         title="Action Movies"
         id="ACT"
+        subtitle="As rated by regular MovieDB Action Favors"
         fetchURL={request.fetchActionMovies}
       />
       <MovieList
         title="Comedy Movies"
         id="COM"
+        subtitle="As rated by regular MovieDB Comedy Favors"
         fetchURL={request.fetchComedyMovies}
       />
       <Footer />

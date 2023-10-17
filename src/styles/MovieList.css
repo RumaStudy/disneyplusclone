@@ -4,6 +4,12 @@
 }
 .MovieListWrapper > h2 {
   font-size: 1.7rem;
+  border-left: 2px solid rgba(255, 255, 255, 0.65);
+  padding-left: 1rem;
+}
+.MovieListWrapper > .subtitle {
+  font-size: 13px;
+  margin-left: 2rem;
 }
 .slider {
   position: relative;
@@ -85,5 +91,8 @@
 @media screen and (max-width: 768px) {
   .list_posters {
     max-height: 280px;
+  }
+  .MovieListWrapper > .subtitle {
+    display: none;
   }
 }

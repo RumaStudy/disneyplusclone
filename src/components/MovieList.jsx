@@ -5,7 +5,7 @@ import MovieModal from "./MovieModal";
 /* CSS */
 import "../styles/MovieList.css";
 
-const MovieList = ({ title, id, fetchURL }) => {
+const MovieList = ({ title, id, fetchURL, subtitle }) => {
   // useState
   const [movies, setMovies] = useState([]);
   const [modal, setModal] = useState(false);
@@ -30,12 +30,12 @@ const MovieList = ({ title, id, fetchURL }) => {
   return (
     <section className="MovieListWrapper">
       <h2>{title}</h2>
+      <p className="subtitle">{subtitle}</p>
       <div className="slider">
         <div className="slider_arrow-left">
           <span
             className="arrow"
             onClick={() => {
-              console.log(id);
               document.getElementById(id).scrollLeft -= window.innerWidth + 80;
             }}
           >

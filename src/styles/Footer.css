@@ -35,4 +35,7 @@ footer.footer {
     align-items: center;
     row-gap: 1rem;
   }
+  .footer_lower {
+    padding: 1rem;
+  }
 }
