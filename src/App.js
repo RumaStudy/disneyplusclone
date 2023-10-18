@@ -23,15 +23,17 @@ const Layout = () => {
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        {/* 중첩라우팅 */}
-        <Route index element={<Main />} />
-        <Route path="/main" element={<Main />} />
-        <Route path="/:movieId" element={<Detail />} />
-        <Route path="/search" element={<Search />} />
-      </Route>
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          {/* 중첩라우팅 */}
+          <Route index element={<Login />} />
+          <Route path="/main" element={<Main />} />
+          <Route path="/:movieId" element={<Detail />} />
+          <Route path="/search" element={<Search />} />
+        </Route>
+      </Routes>
+    </>
   );
 }
 
