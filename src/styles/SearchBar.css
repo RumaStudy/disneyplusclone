@@ -2,14 +2,29 @@
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, 50%);
   color: white;
   padding: 5px;
   border: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.75);
   margin-top: 1rem;
-  background-color: rgba(0, 0, 0, 0.582);
+  font-size: 1.1rem;
+  background-color: transparent;
 }
 .SearchBar::placeholder {
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.75);
+}
+@media screen and (max-width: 768px) {
+  .SearchBar {
+    width: 50%;
+    left: 70%;
+    margin-top: 0.5rem;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .SearchBar {
+    width: 600px;
+    padding: 10px;
+    margin: 0;
+  }
 }

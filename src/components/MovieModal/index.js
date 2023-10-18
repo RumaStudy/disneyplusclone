@@ -12,7 +12,7 @@ const MovieModal = ({
   setModal,
 }) => {
   return (
-    <article className="MovieModal" role="presentaition">
+    <article className="MovieModal">
       <div className="wrapperModal">
         <div className="modal">
           <span

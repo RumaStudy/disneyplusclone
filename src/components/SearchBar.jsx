@@ -16,6 +16,7 @@ const SearchBar = () => {
         value={searchValue}
         className="SearchBar"
         onChange={handleChange}
+        placeholder="영화를 검색해주세요."
       />
     </>
   );

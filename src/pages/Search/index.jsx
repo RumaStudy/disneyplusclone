@@ -54,6 +54,19 @@ const Search = () => {
                     className="movie_poster"
                   />
                 </div>
+                <div className="hoverSection">
+                  <p className="movie_title">
+                    {item.title ? item.title : item.name}
+                    <span className="movie_launch">
+                      {item.release_date ? item.release_date : ""}
+                    </span>
+                  </p>
+                  <p>
+                    {item.overview
+                      ? `${item.overview.substring(0, 69)}...`
+                      : ""}
+                  </p>
+                </div>
               </div>
             );
           }
