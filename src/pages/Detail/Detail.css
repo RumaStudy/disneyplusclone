@@ -1,0 +1,72 @@
+.DetailPage {
+  margin-top: 70px;
+  width: 100%;
+}
+.DetailPage > img {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -3;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  filter: blur(3px) grayscale(0.2) contrast(1.2);
+}
+
+.movie_detail-Container {
+  width: 70%;
+  padding: 2rem;
+  border-radius: 2rem;
+  margin: calc(70px + 2rem) auto;
+  background-color: rgba(25, 25, 25, 0.75);
+}
+.detail_title {
+  font-size: 3rem;
+}
+.detail_flexer {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+  gap: 1rem;
+}
+.detail_poster {
+  flex: 0.5;
+  width: 40vw;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+.detail_Paras {
+  flex: 1;
+}
+.detail_Paras > h2 {
+  font-size: 1.7rem;
+}
+.detail_Paras > h2 + h3 {
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.detail_Paras > h5 {
+  font-weight: 400;
+}
+.detail_Launch {
+  margin-bottom: 1rem;
+}
+.detail_Overview {
+  line-height: 160%;
+}
+@media screen and (max-width: 768px) {
+  .detail_title {
+    font-size: 1.3rem;
+    font-weight: 900;
+  }
+  .detail_flexer {
+    flex-direction: column;
+  }
+  .detail_Paras > h2 {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+}

@@ -1,7 +1,8 @@
 footer.footer {
   width: 100%;
   margin-top: 5rem;
-  padding-bottom: 6rem;
+  padding-bottom: 2rem;
+  background-color: rgba(2, 7, 21, 0.45);
 }
 .footer_upper {
   border-top: 1px solid rgba(255, 255, 255, 0.5);

@@ -11,14 +11,16 @@ import { useLocation } from "react-router-dom";
 const Logo = styled.a`
   display: inline-block;
   width: 80px;
-  max-height: 70px;
+  max-height: 90px;
   padding: 0;
-  margin-top: 4px;
+  transform: scale(1.3);
   font-size: 0;
   cursor: pointer;
   > img {
     display: block;
     width: 100%;
+    object-fit: contain;
+    object-position: center center;
   }
 `;
 const GNBWrap = styled.header`
@@ -30,8 +32,8 @@ const GNBWrap = styled.header`
   top: 0;
   z-index: 99;
   width: 100%;
-  height: 70px;
-  padding: 0 36px;
+  height: 90px;
+  padding: 0 70px;
   transition: ease-in-out 550ms;
   letter-spacing: 16px;
   color: white;

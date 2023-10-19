@@ -47,7 +47,7 @@ const Search = () => {
                 className="movie"
                 key={item.id}
                 onClick={() => {
-                  navigate(`${item.id}`);
+                  navigate(`/${item.id}`);
                 }}
               >
                 <div className="movie_column-poster">
@@ -60,7 +60,7 @@ const Search = () => {
                 <div
                   className="hoverSection"
                   onClick={() => {
-                    navigate(`${item.id}`);
+                    navigate(`/${item.id}`);
                   }}
                 >
                   <p className="movie_title">
