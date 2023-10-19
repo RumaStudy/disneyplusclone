@@ -37,7 +37,7 @@ const Details = () => {
           <div className="detail_Paras">
             <h2>{movie.tagline ? `${movie.tagline}` : ""}</h2>
             <h3>{movie.runtime ? `${movie.runtime} 분` : ""}</h3>
-            <h5>평점: {movie.vote_average} 점</h5>
+            <h5>평점: {Math.floor(movie.vote_average)} 점</h5>
             <h5 className="detail_Launch">
               {movie.release_date ? `개봉일: ${movie.release_date}` : ""}
             </h5>
