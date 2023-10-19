@@ -58,7 +58,7 @@ const GNB = () => {
   });
 
   const handleScroll = () => {
-    if (window.scrollY > 600) {
+    if (window.scrollY > 200) {
       setShow(true);
     } else {
       setShow(false);

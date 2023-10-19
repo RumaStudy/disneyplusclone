@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import axios from "../../api/axios";
 import "./Search.css";
+import { useDebounce } from "../../hooks/useDebounce";
 
 const Search = () => {
   // useState()
@@ -11,24 +12,26 @@ const Search = () => {
   const useQuery = () => new URLSearchParams(useLocation().search);
   let query = useQuery();
   const searchTerm = query.get("q");
+  const debouncedSearchTerm = useDebounce(searchTerm, 500); // 지연 적용할 value와 지연 시간
 
   // Axios
   const fetchSearchMovie = async (searchTerm) => {
     try {
       const response = await axios.get(
-        `/search/multi?include_adult=false&query=${searchTerm}`
+        `/search/multi?include_adult=false&query=${debouncedSearchTerm}`
       );
       setSearchResults(response.data.results);
     } catch (error) {
       console.log(error); // 오류 발생 시 catch
     }
   };
+
   // useEffect()
   useEffect(() => {
-    if (searchTerm) {
-      fetchSearchMovie(searchTerm);
+    if (debouncedSearchTerm) {
+      fetchSearchMovie(debouncedSearchTerm);
     }
-  }, [searchTerm]);
+  }, [debouncedSearchTerm]);
 
   const navigate = useNavigate();
 
@@ -54,7 +57,12 @@ const Search = () => {
                     className="movie_poster"
                   />
                 </div>
-                <div className="hoverSection">
+                <div
+                  className="hoverSection"
+                  onClick={() => {
+                    navigate(`${item.id}`);
+                  }}
+                >
                   <p className="movie_title">
                     {item.title ? item.title : item.name}
                     <span className="movie_launch">
@@ -77,7 +85,9 @@ const Search = () => {
     return (
       <section className="noResult">
         <div className="noResultText"></div>
-        <p>찾고자하는 검색어 "{searchTerm}"과 일치하는 영화가 없습니다.</p>
+        <p>
+          찾고자하는 검색어 "{debouncedSearchTerm}"과 일치하는 영화가 없습니다.
+        </p>
       </section>
     );
   }

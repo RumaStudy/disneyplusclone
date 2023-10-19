@@ -25,6 +25,7 @@
   .SearchBar {
     width: 600px;
     padding: 10px;
-    margin: 0;
+    margin: 15px 0 0;
+    transform: translate(-50%, 0);
   }
 }

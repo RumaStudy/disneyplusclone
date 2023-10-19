@@ -39,18 +39,24 @@
 }
 .hoverSection {
   position: absolute;
-  bottom: 0;
+  top: 100%;
   left: 50%;
-  transform: translateX(-50%) translateY(57px);
+  transform: translateX(-50%) translateY(-46px);
   z-index: 3;
   display: block;
   width: 100%;
   padding: 1rem;
   background-color: rgba(2, 7, 21, 0.45);
   transition: 400ms ease-in-out;
+  cursor: pointer;
 }
 .movie_column-poster:hover + .hoverSection {
-  transform: translateX(-50%) translateY(0);
+  top: 100%;
+  transform: translateX(-50%) translateY(-100%);
+}
+.hoverSection:hover {
+  top: 100%;
+  transform: translateX(-50%) translateY(-100%);
 }
 .movie_title {
   font-size: 1.2rem;
