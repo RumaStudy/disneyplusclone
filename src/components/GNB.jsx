@@ -40,6 +40,20 @@ const GNBWrap = styled.header`
   background-color: ${(props) => (props.show ? "#090b13" : "transparent")};
 `;
 
+const LoginBtn = styled.a`
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 8px 16px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border: 1px solid #f9f9f9;
+  transition: 0.2s ease;
+  &:hover {
+    background-color: #f9f9f9;
+    color: gray;
+    border-color: transparent;
+  }
+`;
+
 const GNB = () => {
   /* useLocation */
   const { pathname } = useLocation(); // 현재 path를 반환 ex) "/main"
@@ -78,7 +92,7 @@ const GNB = () => {
           }}
         />
       </Logo>
-      {pathname === "/" ? <Login /> : <SearchBar />}
+      {pathname === "/" ? <LoginBtn>Login</LoginBtn> : <SearchBar />}
     </GNBWrap>
   );
 };

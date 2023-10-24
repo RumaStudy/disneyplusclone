@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
 import "./styles/index.css";
 import App from "./App";
+import app from "./api/firebase";
 
 // Library
 import { BrowserRouter } from "react-router-dom";

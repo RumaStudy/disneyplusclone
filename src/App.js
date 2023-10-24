@@ -1,5 +1,5 @@
 import "./styles/App.css";
-import { Outlet, Routes, Route } from "react-router-dom";
+import { Outlet, Routes, Route, useLocation } from "react-router-dom";
 
 // Components
 import GNB from "./components/GNB";
@@ -12,11 +12,13 @@ import Detail from "./pages/Detail/index";
 import Search from "./pages/Search/index";
 
 const Layout = () => {
+  const { pathname } = useLocation();
   return (
     <div className="WholePageContainer">
       <GNB />
       <Outlet /> {/* 서브페이지가 보여질 위치를 지정해주는 컴포넌트 */}
-      <Footer />
+      {pathname === "/" ? "" : <Footer />}{" "}
+      {/* pathname이 /면 footer를 숨겨서 페이지가 깔끔해 보이도록 */}
     </div>
   );
 };
