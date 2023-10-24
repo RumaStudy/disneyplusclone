@@ -56,3 +56,36 @@
     display: none;
   }
 }
+
+/* Swiper JS Styling */
+.swiper-pagination {
+  text-align: right !important;
+}
+.swiper-pagination-bullet {
+  background: gray !important;
+  opacity: 1 !important;
+}
+.swiper-pagination-bullet-active {
+  background-color: gray !important;
+}
+.swiper-pagination-bullet-active:hover {
+  background-color: white !important;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: gray !important;
+  transition: 400ms ease-in-out !important;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: white !important;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
+}
+.swiper-slide {
+  box-shadow: rgba(0, 0, 0, 0.69) 0px 26px 30px -10px,
+    rgb(0, 0, 0, 0.73) 0px 16px 10px -10px !important;
+}

@@ -40,3 +40,9 @@ footer.footer {
     padding: 1rem;
   }
 }
+@media screen and (max-width: 1300px) {
+  .footer_upper > ul {
+    width: 100%;
+    justify-content: space-around;
+  }
+}

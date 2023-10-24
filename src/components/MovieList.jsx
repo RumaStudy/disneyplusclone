@@ -4,13 +4,12 @@ import MovieModal from "./MovieModal";
 /* Library & Framework */
 import styled from "styled-components";
 import axios from "../api/axios";
-import { Navigation, Scrollbar, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, A11y } from "swiper/modules";
 
 /* Swiper CSS */
 import "swiper/css";
 import "swiper/css/navigation";
-import "swiper/css/scrollbar";
 
 /* CSS */
 import "../styles/MovieList.css";
@@ -49,14 +48,17 @@ const MovieList = ({ title, id, fetchURL, subtitle }) => {
             spaceBetween={30}
             loop={true}
             navigation={true}
-            scrollbar={{
-              hide: true,
+            breakpoints={{
+              1378: { slidesPerView: 6, slidesPerGroup: 6 },
+              998: { slidesPerView: 5, slidesPerGroup: 5 },
+              625: { slidesPerView: 4, slidesPerGroup: 4 },
+              0: { slidesPerView: 3, slidesPerGroup: 3 },
             }}
-            modules={[Navigation, Scrollbar, A11y]}
+            modules={[Navigation, A11y]}
           >
             <Content id={id}>
               {movies.map((item) => (
-                <SwiperSlide>
+                <SwiperSlide key={item.id}>
                   <Wrap>
                     <img
                       src={`https://image.tmdb.org/t/p/original${item.backdrop_path}`}
@@ -93,12 +95,13 @@ const Wrap = styled.div`
   &:hover {
     border-color: white;
     & > img {
-      transform: scale(1.5);
+      transform: scale(1.2);
     }
   }
   & > img {
     width: 100%;
     height: 100%;
+    border-radius: 1rem;
     object-fit: cover;
     object-position: center center;
     transition: 400ms ease;
