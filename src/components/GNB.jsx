@@ -1,58 +1,21 @@
 import React, { useEffect, useState } from "react";
 import LogoImg from "../assets/img/GNB/logo.svg";
-import Login from "../pages/Login/index";
 import SearchBar from "./SearchBar";
+import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth"; // firebase 인증 및 구글 인증 모듈 + Pop Up 로그인 모듈
 
 /* Library */
 import { styled } from "styled-components";
 import { useLocation } from "react-router-dom";
 
-/* Styled-Components */
-const Logo = styled.a`
-  display: inline-block;
-  width: 80px;
-  max-height: 90px;
-  padding: 0;
-  transform: scale(1.3);
-  font-size: 0;
-  cursor: pointer;
-  > img {
-    display: block;
-    width: 100%;
-    object-fit: contain;
-    object-position: center center;
-  }
-`;
-const GNBWrap = styled.header`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 99;
-  width: 100%;
-  height: 90px;
-  padding: 0 70px;
-  transition: ease-in-out 550ms;
-  letter-spacing: 16px;
-  color: white;
-  background-color: ${(props) => (props.show ? "#090b13" : "transparent")};
-`;
-
-const LoginBtn = styled.a`
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 8px 16px;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  border: 1px solid #f9f9f9;
-  transition: 0.2s ease;
-  &:hover {
-    background-color: #f9f9f9;
-    color: gray;
-    border-color: transparent;
-  }
-`;
+const auth = getAuth();
+const provider = new GoogleAuthProvider();
+const handleAuth = () => {
+  signInWithPopup(auth, provider)
+    .then((result) => {})
+    .catch((error) => {
+      console.log(error);
+    });
+};
 
 const GNB = () => {
   /* useLocation */
@@ -92,9 +55,60 @@ const GNB = () => {
           }}
         />
       </Logo>
-      {pathname === "/" ? <LoginBtn>Login</LoginBtn> : <SearchBar />}
+      {pathname === "/" ? (
+        <LoginBtn onClick={handleAuth}>Login</LoginBtn>
+      ) : (
+        <SearchBar />
+      )}
     </GNBWrap>
   );
 };
 
 export default GNB;
+
+/* Styled-Components */
+const Logo = styled.a`
+  display: inline-block;
+  width: 80px;
+  max-height: 90px;
+  padding: 0;
+  transform: scale(1.3);
+  font-size: 0;
+  cursor: pointer;
+  > img {
+    display: block;
+    width: 100%;
+    object-fit: contain;
+    object-position: center center;
+  }
+`;
+const GNBWrap = styled.header`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  width: 100%;
+  height: 90px;
+  padding: 0 70px;
+  transition: ease-in-out 550ms;
+  letter-spacing: 16px;
+  color: white;
+  background-color: ${(props) => (props.show ? "#090b13" : "transparent")};
+`;
+const LoginBtn = styled.a`
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 8px 16px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border: 1px solid #f9f9f9;
+  transition: 0.2s ease;
+  cursor: pointer;
+  &:hover {
+    background-color: #f9f9f9;
+    color: gray;
+    border-color: transparent;
+  }
+`;

@@ -16,9 +16,3 @@ root.render(
 );
 
 reportWebVitals();
-
-// 중첩 라우팅
-/* 
-<Routes> 안에 <Route></Route> 안에 다시 한번 <Route/>
-<Route/> 에 index 속성으로 "/" path에서 표기하도록 변경
-*/

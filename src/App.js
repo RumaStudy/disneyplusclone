@@ -13,6 +13,8 @@ import Search from "./pages/Search/index";
 
 const Layout = () => {
   const { pathname } = useLocation();
+  const loc = useLocation();
+  const par = new URLSearchParams(loc.search);
   return (
     <div className="WholePageContainer">
       <GNB />
