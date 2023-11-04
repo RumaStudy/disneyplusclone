@@ -1,23 +1,24 @@
 import React, { useEffect, useState } from "react";
 import LogoImg from "../assets/img/GNB/logo.svg";
 import SearchBar from "./SearchBar";
-import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth"; // firebase 인증 및 구글 인증 모듈 + Pop Up 로그인 모듈
+import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth"; // 인증, 구글인증기, 팝업을 통한 로그인 기능
 
 /* Library */
 import { styled } from "styled-components";
 import { useLocation } from "react-router-dom";
 
-const auth = getAuth();
-const provider = new GoogleAuthProvider();
-const handleAuth = () => {
-  signInWithPopup(auth, provider)
-    .then((result) => {})
-    .catch((error) => {
-      console.log(error);
-    });
-};
-
 const GNB = () => {
+  /* Firebase Vars */
+  const auth = getAuth();
+  const provider = new GoogleAuthProvider();
+  const handleAuth = () => {
+    signInWithPopup(auth, provider)
+      .then((result) => {})
+      .catch((error) => {
+        alert(error.message);
+      });
+  };
+
   /* useLocation */
   const { pathname } = useLocation(); // 현재 path를 반환 ex) "/main"
 
