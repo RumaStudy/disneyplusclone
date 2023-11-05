@@ -98,12 +98,16 @@ const GNB = () => {
       ) : (
         <SearchBar />
       )}
-      <SignOut>
-        <UserImg src={userData.photoURL} alt={userData.displayName} />
-        <DropDwn>
-          <span onClick={handleSignOut}>Sign Out</span>
-        </DropDwn>
-      </SignOut>
+      {pathname !== "/" ? (
+        <SignOut>
+          <UserImg src={userData.photoURL} alt={userData.displayName} />
+          <DropDwn>
+            <span onClick={handleSignOut}>Sign Out</span>
+          </DropDwn>
+        </SignOut>
+      ) : (
+        ""
+      )}
     </GNBWrap>
   );
 };

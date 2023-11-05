@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a0446f21.css",
+    "main.js": "/static/js/main.8a336458.js",
+    "static/js/787.e72b8c84.chunk.js": "/static/js/787.e72b8c84.chunk.js",
+    "static/media/national-geographic.mp4": "/static/media/national-geographic.bf1b675d8d0beb6c25bc.mp4",
+    "static/media/star-wars.mp4": "/static/media/star-wars.90fa9f5ae993d23505b5.mp4",
+    "static/media/login-background.jpg": "/static/media/login-background.05b1a1b3088cbb458939.jpg",
+    "static/media/pixar.mp4": "/static/media/pixar.971baf2b0d1f60c27f42.mp4",
+    "static/media/disney.mp4": "/static/media/disney.76f717a34732ff5c5752.mp4",
+    "static/media/marvel.mp4": "/static/media/marvel.25a822f51e652dec1417.mp4",
+    "static/media/home-background.png": "/static/media/home-background.a0c4bdd961442f1bc8b1.png",
+    "static/media/viewers-starwars.png": "/static/media/viewers-starwars.3fb2e20c0faee83d89db.png",
+    "static/media/cta-logo-two.png": "/static/media/cta-logo-two.e69ae55254630c715843.png",
+    "static/media/viewers-disney.png": "/static/media/viewers-disney.eb5bab59e7bf29389dc7.png",
+    "static/media/viewers-national.png": "/static/media/viewers-national.c50dd65f4a3d07a590f7.png",
+    "static/media/cta-logo-one.svg": "/static/media/cta-logo-one.51d9b8d70927afb97d9b4dcc166ed8f6.svg",
+    "static/media/logo.svg": "/static/media/logo.8205aae82a3c67ca943e8628e2183b0d.svg",
+    "index.html": "/index.html",
+    "main.a0446f21.css.map": "/static/css/main.a0446f21.css.map",
+    "main.8a336458.js.map": "/static/js/main.8a336458.js.map",
+    "787.e72b8c84.chunk.js.map": "/static/js/787.e72b8c84.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a0446f21.css",
+    "static/js/main.8a336458.js"
+  ]
+}
